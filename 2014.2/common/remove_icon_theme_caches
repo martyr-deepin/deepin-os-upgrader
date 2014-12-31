@@ -1,2 +1,2 @@
 #!/bin/bash
-rm -rf /usr/share/icons/*/icon-theme.cache
+sudo rm -rf /usr/share/icons/*/icon-theme.cache
