@@ -1,1 +1,1 @@
-sudo apt-get remove tlp
+sudo apt-get purge tlp

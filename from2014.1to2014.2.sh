@@ -2,5 +2,5 @@
 rm -rf /home/*/.config/deepin_monitors.json
 #!/bin/bash
 sudo rm -rf /usr/share/icons/*/icon-theme.cache
-sudo apt-get remove tlp
+sudo apt-get purge tlp
 sudo apt-get update && sudo apt-get dist-upgrade
