@@ -1,7 +1,7 @@
 如何升级
 ========
-从2014.1到2014.2:
-    $ wget https://gitcafe.com/Deepin/deepin-os-upgrader/raw/release_forward_slash_2014.2.1/from2014.1to2014.2.sh && sudo bash ./from2014.1to2014.2.sh 
 
-从2014.2RC到2014.2:
-    $ wget https://gitcafe.com/Deepin/deepin-os-upgrader/raw/release_forward_slash_2014.2.1/from2014.2RCto2014.2.sh && sudo bash ./from2014.1to2014.2.sh 
+执行命令 perl upgrade.pl
+输入 a 或 b 按回车
+之后会请求以 root 执行,输入管理员密码按回车
+
