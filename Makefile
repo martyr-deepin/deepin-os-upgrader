@@ -13,3 +13,7 @@ from2014.2RCto2014.2.sh:
 
 clean:
 	rm from2014.1to2014.2.sh from2014.2RCto2014.2.sh
+
+install:
+	mkdir -p ${DESTDIR}/usr/bin
+	cp upgrade.pl ${DESTDIR}/usr/bin/os-upgrade
