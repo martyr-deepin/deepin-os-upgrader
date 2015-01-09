@@ -1,4 +1,5 @@
 #!/bin/bash
-#!/bin/bash
-sudo rm -rf /usr/share/icons/*/icon-theme.cache
-sudo apt-get update && sudo apt-get dist-upgrade
+rm -rf /usr/share/icons/*/icon-theme.cache
+apt-get update && apt-get dist-upgrade
+/usr/lib/deepin-daemon/grub2 --setup
+update-grub
