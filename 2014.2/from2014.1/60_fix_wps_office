@@ -1,2 +1,0 @@
-dpkg -l | grep kingsoft-office >/dev/null && apt-get purge -y kingsoft-office && apt-get install wps-office
-dpkg -l | grep wps-office- >/dev/null && apt-get purge  wps-office-* && apt-get install wps-office
