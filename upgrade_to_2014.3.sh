@@ -38,3 +38,7 @@ remove_cache
 fix_postinst
 install_remove_packages
 upgrade
+
+echo "为了保证您的系统正常使用，请按回车键确认重启系统。"
+read var
+reboot
