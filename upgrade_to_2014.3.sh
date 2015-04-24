@@ -14,9 +14,16 @@ function fix_postinst(){
 
 function install_remove_packages(){
     # remove packages which are not in 2014.3
-    dpkg -p tlp >&/dev/null && apt-get purge tlp -y
-    dpkg -p kingsoft-office &>/dev/null && apt-get purge -y kingsoft-office && apt-get install wps-office -y
+    dpkg -s tlp >&/dev/null && apt-get purge tlp -y
+    dpkg -s kingsoft-office &>/dev/null && apt-get purge -y kingsoft-office && apt-get install wps-office -y
     dpkg -l | grep wps-office- >/dev/null && apt-get purge -y wps-office-* && apt-get install wps-office -y
+}
+
+function install_deepinwine_qq(){
+    L=$(locale | grep LANGUAGE | sed -e 's/\"//g' -e 's/.*=//' -e 's/\..*//g' | tr "[A-Z]" "[a-z]")
+    if [ "$L" == "zh_cn" ];then
+        dpkg -s deepin-crossover &>/dev/null || apt-get install deepin-crossover libbsd0 deepinwine-qq
+    fi
 }
 
 function upgrade(){
@@ -37,6 +44,7 @@ apt-get update -y
 remove_cache
 fix_postinst
 install_remove_packages
+install_deepinwine_qq
 upgrade
 
 echo "为了保证您的系统正常使用，请按回车键确认重启系统。"
